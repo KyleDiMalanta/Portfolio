@@ -26,15 +26,16 @@
 <body class="w3-light-grey">
 
     <!-- Sidebar -->
-    <nav class="w3-sidebar w3-bar-block w3-dark-green w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+    <nav class="w3-sidebar w3-bar-block w3-olive w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
 
         <div class="w3-container w3-padding-16 w3-center">
-            <img src="images/profile.png" class="w3-circle w3-margin-bottom" style="width:150px">
+            <img src="images/profile.jpg" class="w3-circle w3-margin-bottom"
+                style="width:150px;height:150px;object-fit:cover;">
             <h3><b>Kyle DiMalanta</b></h3>
         </div>
 
-        <a href="#projects" class="w3-bar-item w3-button">Projects</a>
         <a href="#about" class="w3-bar-item w3-button">About</a>
+        <a href="#projects" class="w3-bar-item w3-button">Projects</a>
         <a href="#contact" class="w3-bar-item w3-button">Contact</a>
 
     </nav>
@@ -45,19 +46,92 @@
         <!-- Header -->
         <header class="w3-container w3-padding-32">
             <h1><b>Hi! I'm Kyle. Welcome to my portfolio!</b></h1>
-            <p>Embedded Systems | Controls | Avionics | Robotics</p>
         </header>
 
         <!-- About Section -->
         <div class="w3-container w3-padding-32 w3-light-grey" id="about">
             <h2><b>About Me</b></h2>
             <p>
-                I'm a rising senior at the University of Michigan majoring in electrical engineering
-                and minoring in computer science. I have an interest in ... with lots of experience in...
+                Hello!
+                I'm a rising senior at the University of Michigan majoring in electrical engineering and minoring in
+                computer science.
+                As a proud product of the Legos as a kid to engineering pipeline, I can confidently say that I've not
+                lost the excitment of building, creating, and learning.
+                (WORK ON THIS TRANSITION)When my dad decided to pursue his pilots license during COVID, I was allowed
+                the privilege of sitting right seat for many flights.
+                Those experiences sparked my own interest for aviation, which I was able to excercise as an avionics
+                wiring harness technician at Lapeer Aviation.
+                (CLEAN UP THIS SENTENCE)My time at Lapeer Aviation was highlighted by test flights with my boss to
+                verify my own work in the planes, as well as the uncomfortable periods spent in the tails of planes
+                contorting my body to route cables and wiring harnesses.
             </p>
             <p>
-                Apart from school/work I also like to...
+                (TAKE YOUR TIME ON THIS PARAGRAPH)
+                These early experiences in aviation grew during my time at AeroTrain, where I got hands-on with embedded
+                systems for pilot training and flight simulation. I also joined the student team Michigan Autonomous
+                Aerial
+                Vehicles, where I developed skills in PCB design, system integration, and collaborative problem-solving
+                to
+                tackle real flight-related challenges. I love building, troubleshooting, and thinking through how all
+                the pieces
+                of a system come together—whether on the ground or in the air.
             </p>
+            <p>
+                Asside from my technical interests, I am passionate about many other things.
+                I started learning the cello in elementary school, and my love and appreciation for the instrument has
+                grown as I've been able to play for weddings, serve in my local church, and act as the principle cello
+                for the U of M campus strings orchestra for a year.
+                Also, I love doing anything outdoors.
+                One of my favorite activities when the weather cooperates is cold water surfing in Lake Michigan.
+                Even when the waves are lackluster, any dissapointment is quickly cured by the unrivaled beauty of a
+                Lake Michigan sunset enjoyed from the middle of the lake on a bobbing surfboard.
+                Lastly, I enjoy playing the game of basketball.
+                I've played intramurals all three years I've been at school, and had an awesome experience winning an
+                intramural championship in the 5 V 5 competitive league with my team.
+                The discipline I've shown in refining these skills, along with my willingness to learn from those better
+                than me are qualities I aim to carry into my professional work.
+            </p>
+        </div>
+
+        <!-- Image Gallery Section -->
+        <div class="w3-container w3-padding-32" id="gallery">
+            <div class="w3-row-padding w3-center" style="font-size:0;">
+                <!-- font-size:0 removes gaps between inline-blocks -->
+                <!-- Image 1 -->
+                <div style="width:12.5%; display:inline-block;">
+                    <img src="images/plane2.jpeg" style="width:100%; aspect-ratio:1/1; object-fit:cover;" alt="Plane 2">
+                </div>
+                <!-- Image 2 -->
+                <div style="width:12.5%; display:inline-block;">
+                    <img src="images/surf2.jpeg" style="width:100%; aspect-ratio:1/1; object-fit:cover;" alt="Surf 2">
+                </div>
+                <!-- Image 3 -->
+                <div style="width:12.5%; display:inline-block;">
+                    <img src="images/plane1.jpeg" style="width:100%; aspect-ratio:1/1; object-fit:cover;" alt="Work 1">
+                </div>
+                <!-- Image 4 -->
+                <div style="width:12.5%; display:inline-block;">
+                    <img src="images/basketball1.jpeg" style="width:100%; aspect-ratio:1/1; object-fit:cover;"
+                        alt="Basketball 1">
+                </div>
+                <!-- Image 5 -->
+                <div style="width:12.5%; display:inline-block;">
+                    <img src="images/basketball2.jpeg" style="width:100%; aspect-ratio:1/1; object-fit:cover;"
+                        alt="Basketball 2">
+                </div>
+                <!-- Image 6 -->
+                <div style="width:12.5%; display:inline-block;">
+                    <img src="images/cello1.jpeg" style="width:100%; aspect-ratio:1/1; object-fit:cover;" alt="Cello 1">
+                </div>
+                <!-- Image 7 -->
+                <div style="width:12.5%; display:inline-block;">
+                    <img src="images/surf3.jpeg" style="width:100%; aspect-ratio:1/1; object-fit:cover;" alt="Surf 3">
+                </div>
+                <!-- Image 8 -->
+                <div style="width:12.5%; display:inline-block;">
+                    <img src="images/work1.jpeg" style="width:100%; aspect-ratio:1/1; object-fit:cover;" alt="Plane 1">
+                </div>
+            </div>
         </div>
 
         <!-- Projects Section -->
@@ -69,9 +143,8 @@
                 <div class="w3-third w3-margin-bottom">
                     <div class="w3-card w3-white">
                         <div class="w3-container">
-                            <h4><b>Arduino Anniversary Game</b></h4>
-                            <p>Custom embedded system using Arduino Nano, joystick input, OLED display, and game logic
-                                for interactive anniversary project.</p>
+                            <h4><b>Automated Plant Watering System</b></h4>
+                            <p>FILL</p>
                         </div>
                     </div>
                 </div>
@@ -79,9 +152,8 @@
                 <div class="w3-third w3-margin-bottom">
                     <div class="w3-card w3-white">
                         <div class="w3-container">
-                            <h4><b>Simulink Cruise Control</b></h4>
-                            <p>Designed and tuned PID controller with physical constraints. Analyzed overshoot,
-                                steady-state error, and acceleration limits.</p>
+                            <h4><b>Sensor Package for Atmospheric Health Analysis</b></h4>
+                            <p>FILL</p>
                         </div>
                     </div>
                 </div>
@@ -89,9 +161,8 @@
                 <div class="w3-third w3-margin-bottom">
                     <div class="w3-card w3-white">
                         <div class="w3-container">
-                            <h4><b>Magnetically Coupled Loop Lab</b></h4>
-                            <p>Measured RLC parameters and power transfer efficiency using S-parameters and resonance
-                                analysis.</p>
+                            <h4><b>Carrier PCB for Drone Fleet</b></h4>
+                            <p>FILL</p>
                         </div>
                     </div>
                 </div>

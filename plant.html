@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kyle DiMalanta | Plant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- W3 CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif;
+        }
+
+        body {
+            background-color: #f1f1f1;
+        }
+
+        /* Side navigation */
+        .sidenav {
+            height: 100%;
+            width: 220px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #556B2F;
+            /* Olive dark */
+            padding-top: 20px;
+            z-index: 2;
+        }
+
+        .sidenav a {
+            padding: 12px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            background-color: #8fbc8f;
+            color: black;
+        }
+
+        /* Page content shifts right */
+        .main {
+            margin-left: 240px;
+            padding: 20px;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: auto;
+            padding-left: 40px;
+            /* space for timeline line */
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #8a8a8a;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            /* always on left */
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            /* line dot to the left */
+            top: 20px;
+            width: 18px;
+            height: 18px;
+            background-color: white;
+            border: 4px solid #556B2F;
+            /* olive accent */
+            border-radius: 50%;
+        }
+
+        .timeline-text {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .timeline-image {
+            width: 250px;
+            margin-left: 20px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .timeline-item {
+                flex-direction: column;
+            }
+
+            .timeline-image {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+
+        /* Images */
+        .final-product img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Side navigation -->
+    <nav class="w3-sidebar w3-bar-block w3-olive w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+
+        <div class="w3-container w3-padding-16 w3-center">
+            <h3 style="color:white;"><b>Navigation</b></h3>
+        </div>
+
+        <a href="#summary" class="w3-bar-item w3-button w3-hover-light-green">Summary</a>
+        <a href="#pictures" class="w3-bar-item w3-button w3-hover-light-green">Pictures</a>
+        <a href="#timeline" class="w3-bar-item w3-button w3-hover-light-green">Timeline</a>
+
+    </nav>
+
+    <!-- Page content -->
+    <div class="main">
+
+        <!-- Header -->
+        <header class="w3-container w3-padding-16">
+            <h1><b>Automated Programmable Plant Watering System</b></h1>
+        </header>
+
+        <!-- Summary -->
+        <div id="summary" class="w3-container w3-padding-8">
+            <p class="w3-medium" style="max-width:900px;">
+                This system allows five plants to be watered on a customizable timer with varying amounts of water
+                dispensed at each cycle. I used a pump from a Keurig, some hobby solenoids, and an Arduino Nano to
+                control the flow of water to each plant at the right time. The user can easily change and monitor all
+                watering specifications for each plant attached using a joystick and an LCD display. To achieve the
+                design in its current state I went from a breadboard, to a bad PCB, back to breadboard, to a better PCB.
+                I learned so much while completing this project because I did so many things wrong. It was really fun to
+                work on and I look forward to designing a container so I can give these out for my friends to try!
+            </p>
+            <p>
+                Check out all the KiCad files and Arduino code in <a
+                    href="https://github.com/KyleDiMalanta/Sprinkler_System" target="_blank">THIS</a> github repo!
+            </p>
+        </div>
+
+        <!-- Pictures -->
+        <div id="pictures" class="w3-container w3-padding-32">
+            <div class="w3-card w3-white w3-padding-16" style="border-radius:8px;">
+
+                <div class="w3-row-padding" style="display:flex; gap:16px;">
+
+                    <!-- Left column -->
+                    <div style="flex:1; display:flex; flex-direction:column; gap:16px;">
+
+                        <!-- System in Action (66%) -->
+                        <div style="flex:2; display:flex; flex-direction:column;">
+                            <p style="text-align:center; margin-top:4px;">System in Action</p>
+                            <img src="plant_images/in_action.jpeg"
+                                style="width:100%; object-fit:cover; border-radius:8px; flex-shrink:0;">
+                        </div>
+
+                        <!-- Schematic (33%) -->
+                        <div style="flex:1; display:flex; flex-direction:column;">
+                            <p style="text-align:center; margin-top:4px;">Schematic</p>
+                            <img src="plant_images/schematic.png"
+                                style="width:100%; object-fit:cover; border-radius:8px; flex-shrink:0;">
+                        </div>
+
+                    </div>
+
+                    <!-- Right column -->
+                    <div style="flex:1; display:flex; flex-direction:column; gap:16px;">
+
+                        <!-- PCB Editor -->
+                        <div style="flex:1; display:flex; flex-direction:column;">
+                            <p style="text-align:center; margin-top:4px;">PCB Editor</p>
+                            <img src="plant_images/pcb.png"
+                                style="width:100%; object-fit:cover; border-radius:8px; flex-shrink:0;">
+                        </div>
+
+                        <!-- 3D Viewer -->
+                        <div style="flex:1; display:flex; flex-direction:column;">
+                            <p style="text-align:center; margin-top:4px;">3D Viewer</p>
+                            <img src="plant_images/pcb_3d.png"
+                                style="width:100%; object-fit:cover; border-radius:8px; flex-shrink:0;">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="timeline" class="w3-container w3-padding-32">
+            <h2><b>Developmental Timeline</b></h2> <!-- Add your label here -->
+            <div class="timeline">
+
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card w3-white">
+                        <h4><b>Getting an Idea</b></h4>
+                        <p>
+                            I was initially drawn to the packaging aspect of this project, wanting it to be both
+                            discrete and functional.
+                            To inform my design, I disassembled my sister's coffee maker, which provided me with useful
+                            tubes, a pump, and valuable insights that I could apply to the system.
+                        </p>
+                    </div>
+                    <img src="plant_images/keurig.jpeg" alt="Concept Sketch" class="timeline-image"
+                        style="width:200px; height:200px; object-fit:cover; transform: rotate(-90deg); border-radius:8px;">
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card w3-white">
+                        <h4><b>Initial Testing & Setup</b></h4>
+                        <p>I verified the functionality of the pump I pulled from the coffee maker. I setup and tested
+                            some simple programs on the LCD display and verified its interaction with the joystick.
+                            Nothing yet required external power so everything was being powered by my Laptop.</p>
+                    </div>
+                    <img src="plant_images/testing.jpeg" alt="Prototyping PCB" class="timeline-image"
+                        style="width:200px; height:200px; object-fit:cover; border-radius:8px;">
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card w3-white">
+                        <h4><b>Solving External Power Problem</b></h4>
+                        <p>I wanted the system to be wall-powered and run unobtrusively in the background. I initially
+                            tried a buck converter, but the solder pads were tiny and difficult to work with. Next, I
+                            bought a voltage converter board, but misreading the datasheet caused it to blow up the
+                            moment I plugged it in (safety glasses propoganda). Eventually, I
+                            settled on a through-hole AC-to-12V module for the pumps and solenoids, and a through-hole
+                            12V-to-5V module to power the Arduino, joystick, and LCD.</p>
+                    </div>
+                    <img src="plant_images/blown_board.jpeg" alt="Prototyping PCB" class="timeline-image"
+                        style="width:200px; height:200px; object-fit:cover; border-radius:8px;">
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card w3-white">
+                        <h4><b>Breadboard Thoroughly Before Ordering PCB :(</b></h4>
+                        <p>With the pumps working as anticipated and my winter break coming to a close, I decided to
+                            quickly design and order a PCB. This was not a good decision because there was a problem
+                            with the response of the LCD in the new rushed design. Overall, rushing caused me to make
+                            not
+                            only a disfunctional PCB, but one with lots of wasted space and poor component placement. It
+                            was purple though so that was a plus.
+                        </p>
+                    </div>
+                    <img src="plant_images/purple.jpg" alt="Prototyping PCB" class="timeline-image"
+                        style="width:200px; height:200px; object-fit:cover; border-radius:8px;">
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card w3-white">
+                        <h4><b>Successful System Level Test, Ordered New PCB</b></h4>
+                        <p>After successfully testing the entire system on a breadboard, I moved once again to designing
+                            a PCB. This time I made calculations for trace widths based on current draw, accounted for
+                            the LCD bug which caused my previous design to fail, condensed components in an organized
+                            fashion onto the board, and added red LEDs for debugging purposes. The system is fully functional, but it
+                            still needs proper housing. I look forward to designing a container to complete the
+                            project and put the finishing touch on a design I truly enjoyed working on.
+                        </p>
+                    </div>
+                    <img src="plant_images/pcb.png" alt="Prototyping PCB" class="timeline-image"
+                        style="width:200px; height:200px; object-fit:cover; border-radius:8px;">
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <footer class="w3-container w3-center w3-padding-16">
+                <p>© 2026 Kyle DiMalanta</p>
+            </footer>
+
+        </div>
+    </div>
+</body>
+
+</html>

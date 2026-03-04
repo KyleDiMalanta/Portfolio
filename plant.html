@@ -11,6 +11,42 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
     <style>
+        /* ===== MOBILE FIXES ===== */
+        @media screen and (max-width: 768px) {
+
+            /* Remove sidebar space */
+            .w3-sidebar {
+                display: none;
+            }
+
+            .main,
+            .w3-main {
+                margin-left: 0 !important;
+                padding: 16px !important;
+            }
+
+            /* Stack image grids */
+            .responsive-grid {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+
+            /* Stack flex rows */
+            .responsive-flex {
+                flex-direction: column !important;
+            }
+
+            /* Remove floated images */
+            #about img {
+                float: none !important;
+                display: block;
+                margin: 0 auto 16px auto !important;
+                width: 90% !important;
+                height: auto !important;
+            }
+        }
+
         body,
         h1,
         h2,
@@ -292,7 +328,8 @@
                         <p>After successfully testing the entire system on a breadboard, I moved once again to designing
                             a PCB. This time I made calculations for trace widths based on current draw, accounted for
                             the LCD bug which caused my previous design to fail, condensed components in an organized
-                            fashion onto the board, and added red LEDs for debugging purposes. The system is fully functional, but it
+                            fashion onto the board, and added red LEDs for debugging purposes. The system is fully
+                            functional, but it
                             still needs proper housing. I look forward to designing a container to complete the
                             project and put the finishing touch on a design I truly enjoyed working on.
                         </p>

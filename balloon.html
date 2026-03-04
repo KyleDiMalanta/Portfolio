@@ -1,1 +1,322 @@
-<p>This page is currently under construction :(</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kyle DiMalanta | Sensor Payload</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- W3 CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <style>
+        /* ===== MOBILE FIXES ===== */
+        @media screen and (max-width: 768px) {
+
+            /* Remove sidebar space */
+            .w3-sidebar {
+                display: none;
+            }
+
+            .main,
+            .w3-main {
+                margin-left: 0 !important;
+                padding: 16px !important;
+            }
+
+            /* Stack image grids */
+            .responsive-grid {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+
+            /* Stack flex rows */
+            .responsive-flex {
+                flex-direction: column !important;
+            }
+
+            /* Remove floated images */
+            #about img {
+                float: none !important;
+                display: block;
+                margin: 0 auto 16px auto !important;
+                width: 90% !important;
+                height: auto !important;
+            }
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif;
+        }
+
+        body {
+            background-color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 240px;
+            padding: 20px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: auto;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #8a8a8a;
+            top: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 20px;
+            width: 18px;
+            height: 18px;
+            background-color: white;
+            border: 4px solid #2E4057;
+            border-radius: 50%;
+        }
+
+        .timeline-text {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .timeline-image {
+            width: 220px;
+            margin-left: 20px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline-item {
+                flex-direction: column;
+            }
+
+            .timeline-image {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+
+        .project-images img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-olive w3-collapse w3-top" style="z-index:3;width:250px">
+        <div class="w3-container w3-padding-16 w3-center">
+            <h3 style="color:white;"><b>Navigation</b></h3>
+        </div>
+
+        <a href="#summary" class="w3-bar-item w3-button w3-hover-light-blue">Summary</a>
+        <a href="#pictures" class="w3-bar-item w3-button w3-hover-light-blue">Design</a>
+        <a href="#timeline" class="w3-bar-item w3-button w3-hover-light-blue">Timeline</a>
+    </nav>
+
+    <div class="main">
+
+        <!-- Header -->
+        <header class="w3-container w3-padding-16">
+            <h1><b>Sensor Payload for Atmospheric Measurements</b></h1>
+        </header>
+
+        <!-- Summary -->
+        <div id="summary" class="w3-container w3-padding-8">
+            <p style="max-width:900px;">
+                This project focused on designing and launching a high-altitude weather balloon payload to
+                characterize how ultraviolet (UV) intensity changes with altitude. Our team designed a custom
+                PCB integrating pressure, humidity, acceleration, temperature (internal and external),
+                UV (GUVA), and GPS sensors. Data was logged to an SD card using an Arduino Nano.
+            </p>
+
+            <p style="max-width:900px;">
+                The payload successfully reached nearly 100,000 feet and collected flight data showing
+                a near-linear increase in UV intensity with altitude. While we could not draw
+                definitive conclusions about the health of Michigan's ozone layer, the system
+                successfully validated our hypothesis regarding UV behavior at increasing altitudes.
+            </p>
+        </div>
+
+        <!-- Pictures Section -->
+        <div id="pictures" class="w3-container w3-padding-32">
+            <div class="w3-card w3-white w3-padding-24" style="border-radius:8px;">
+
+                <div style="
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap:24px;
+        ">
+
+                    <!-- Image 1 -->
+                    <div style="text-align:center;">
+                        <p style="margin-bottom:8px;"><b>System-Level Block Diagram</b></p>
+                        <img src="balloon_images/system_level.png"
+                            style="width:100%; height:220px; object-fit:cover; border-radius:8px;">
+                    </div>
+
+                    <!-- Image 2 -->
+                    <div style="text-align:center;">
+                        <p style="margin-bottom:8px;"><b>Final PCB</b></p>
+                        <img src="balloon_images/pcb.png"
+                            style="width:100%; height:220px; object-fit:cover; border-radius:8px;">
+                    </div>
+
+                    <!-- Image 3 -->
+                    <div style="text-align:center;">
+                        <p style="margin-bottom:8px;"><b>Final Payload Exterior</b></p>
+                        <img src="balloon_images/payload.png"
+                            style="width:100%; height:220px; object-fit:cover; border-radius:8px;">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div id="timeline" class="w3-container w3-padding-32">
+            <h2><b>Developmental Timeline</b></h2>
+
+            <div class="timeline">
+
+                <!-- 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card">
+                        <h4><b>Mission Definition</b></h4>
+                        <p>
+                            Defined the scientific objective: measure UV intensity versus altitude
+                            to investigate its relationship with atmospheric behavior and the ozone layer.
+                            Established system constraints including size (4x4 in PCB) and mass under 1 lb.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card">
+                        <h4><b>Sensor Selection & System Architecture</b></h4>
+                        <p>
+                            Integrated pressure, humidity, accelerometer, dual temperature sensors,
+                            GUVA UV sensor, GPS, and SD logging. Designed regulated 5V and 3.3V rails
+                            to support mixed-voltage components.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card">
+                        <h4><b>PCB Design & Power Distribution</b></h4>
+                        <p>
+                            Designed a compact custom PCB in Altium meeting dimensional constraints.
+                            Implemented separate power regulation stages and validated trace widths,
+                            mounting holes, and sensor placement for structural reliability.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card">
+                        <h4><b>Budget Verification</b></h4>
+                        <p>
+                            Completed mass, power, and data budgets. Achieved:
+                            18% mass margin, 90% power margin, and >75,000% data margin
+                            relative to SD card capacity.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card">
+                        <h4><b>Structural Iterations & Cold Testing</b></h4>
+                        <p>
+                            Iterated through multiple foam-based “sandwich style” enclosure designs.
+                            A failed 2-hour cold chamber test revealed battery thermal limitations,
+                            leading to increased insulation and weatherproofing.
+                        </p>
+
+                        <!-- Wide Image Under Text -->
+                        <img src="balloon_images/interations.png" alt="Design Iterations"
+                            style="width:100%; margin-top:16px; border-radius:8px; object-fit:contain;">
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card">
+                        <h4><b>Pre-Flight Validation</b></h4>
+                        <p>
+                            Conducted stair drop tests, elevator pressure validation,
+                            GPS tracking verification, GUVA calibration, and cold chamber re-tests.
+                            Confirmed readiness prior to launch.
+                        </p>
+                    </div>
+                    <img src="balloon_images/tests.png" alt="Prototyping PCB" class="timeline-image"
+                        style="width:200px; height:200px; object-fit:cover; border-radius:8px;">
+                </div>
+
+                <!-- 7 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card">
+                        <h4><b>Launch & Data Analysis</b></h4>
+                        <p>
+                            Payload reached ~100,000 ft. Flight data showed expected
+                            decreases in pressure and temperature with altitude,
+                            and a near-linear increase in UV intensity above ~20,000 ft.
+                            Structural design successfully protected electronics throughout flight.
+                        </p>
+                    </div>
+                    <img src="images/map.jpg" alt="Prototyping PCB" class="timeline-image"
+                        style="width:200px; height:200px; object-fit:cover; border-radius:8px;">
+                </div>
+
+            </div>
+
+            <footer class="w3-container w3-center w3-padding-16">
+                <p>© 2026 Kyle DiMalanta</p>
+            </footer>
+
+        </div>
+    </div>
+</body>
+
+</html>

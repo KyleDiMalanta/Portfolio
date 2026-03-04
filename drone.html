@@ -1,1 +1,316 @@
-<p>This page is currently under construction :(</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kyle DiMalanta | Drone</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- W3 CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+    <style>
+        /* ===== MOBILE FIXES ===== */
+        @media screen and (max-width: 768px) {
+
+            /* Remove sidebar space */
+            .w3-sidebar {
+                display: none;
+            }
+
+            .main,
+            .w3-main {
+                margin-left: 0 !important;
+                padding: 16px !important;
+            }
+
+            /* Stack image grids */
+            .responsive-grid {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+
+            /* Stack flex rows */
+            .responsive-flex {
+                flex-direction: column !important;
+            }
+
+            /* Remove floated images */
+            #about img {
+                float: none !important;
+                display: block;
+                margin: 0 auto 16px auto !important;
+                width: 90% !important;
+                height: auto !important;
+            }
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif;
+        }
+
+        body {
+            background-color: #f1f1f1;
+        }
+
+        /* Side navigation */
+        .sidenav {
+            height: 100%;
+            width: 220px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #556B2F;
+            /* Olive dark */
+            padding-top: 20px;
+            z-index: 2;
+        }
+
+        .sidenav a {
+            padding: 12px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            background-color: #8fbc8f;
+            color: black;
+        }
+
+        /* Page content shifts right */
+        .main {
+            margin-left: 240px;
+            padding: 20px;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: auto;
+            padding-left: 40px;
+            /* space for timeline line */
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #8a8a8a;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            /* always on left */
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            /* line dot to the left */
+            top: 20px;
+            width: 18px;
+            height: 18px;
+            background-color: white;
+            border: 4px solid #556B2F;
+            /* olive accent */
+            border-radius: 50%;
+        }
+
+        .timeline-text {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .timeline-image {
+            width: 250px;
+            margin-left: 20px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .timeline-item {
+                flex-direction: column;
+            }
+
+            .timeline-image {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+
+        /* Images */
+        .final-product img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Side navigation -->
+    <nav class="w3-sidebar w3-bar-block w3-olive w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+
+        <div class="w3-container w3-padding-16 w3-center">
+            <h3 style="color:white;"><b>Navigation</b></h3>
+        </div>
+
+        <a href="#summary" class="w3-bar-item w3-button w3-hover-light-green">Summary</a>
+        <a href="#pictures" class="w3-bar-item w3-button w3-hover-light-green">Pictures</a>
+        <a href="#timeline" class="w3-bar-item w3-button w3-hover-light-green">Timeline</a>
+
+    </nav>
+
+    <!-- Page content -->
+    <div class="main">
+
+        <!-- Header -->
+        <header class="w3-container w3-padding-16">
+            <h1><b>Carrier Board for Fleet of Mine-Detecting Drones</b></h1>
+        </header>
+
+        <!-- Summary -->
+        <div id="summary" class="w3-container w3-padding-8">
+            <p class="w3-medium" style="max-width:900px;">
+                The goal of this board was to optimize for weight. We worked closely with the software team to identify
+                and define the communication protocols required for the mine detection system, along with those needed
+                to support other autonomous operations. The goal was to modify an open-source I/O board designed for
+                Raspberry Pi by removing unnecessary, weight-heavy connectors and integrating essential ones—such as the
+                connector for the AI HAT—to provide the additional computing power required by the software team. My
+                role in this project included documentation research, looking for any open source material we could
+                integrate into our own board. I also contributed to the mechanical design of how the boards would be
+                mounted on the drone and spent time carefully routing high-speed traces to ensure signal integrity. This
+                project is still an active development, but it has taught me a great deal about carefully analyzing
+                documentation and discerning which materials and design approaches are worth incorporating into our
+                system.
+            </p>
+        </div>
+
+        <!-- Pictures -->
+        <div id="pictures" class="w3-container w3-padding-32">
+            <div class="w3-card w3-white w3-padding-16" style="border-radius:8px;">
+
+                <div class="w3-row-padding" style="display:flex; gap:16px;">
+
+                    <!-- Left column -->
+                    <div style="flex:1; display:flex; flex-direction:column; gap:16px;">
+
+                        <!-- System in Action (66%) -->
+                        <div style="flex:2; display:flex; flex-direction:column;">
+                            <p style="text-align:center; margin-top:4px;">PCB Editor</p>
+                            <img src="images/carrier.png"
+                                style="width:100%; object-fit:cover; border-radius:8px; flex-shrink:0;">
+                        </div>
+
+                    </div>
+
+                    <!-- Right column -->
+                    <div style="flex:1; display:flex; flex-direction:column; gap:16px;">
+
+                        <!-- PCB Editor -->
+                        <div style="flex:1; display:flex; flex-direction:column;">
+                            <p style="text-align:center; margin-top:4px;">3D Viewer</p>
+                            <img src="maav_images/3d.png"
+                                style="width:100%; object-fit:cover; border-radius:8px; flex-shrink:0;">
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="timeline" class="w3-container w3-padding-32">
+            <h2><b>Developmental Timeline</b></h2> <!-- Add your label here -->
+            <div class="timeline">
+
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card w3-white">
+                        <h4><b>Initial Ideas</b></h4>
+                        <p>
+                            We knew the regular RPi5 would be too heavy on its own. Furthermore, we knew we
+                            needed more compute than an RPi5 could provide on its own. The goal was to modify an
+                            open-source I/O
+                            board and redesign its layout so the AI HAT could be mounted directly on top, reducing
+                            overall system weight.
+                        </p>
+                    </div>
+                    <img src="maav_images/original_idea.png" alt="Concept Sketch" class="timeline-image"
+                        style="width:320px; height:200px; object-fit:cover; border-radius:8px;">
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card w3-white">
+                        <h4><b>Mechanical Layout</b></h4>
+                        <p>The mechanical layout was designed to ensure that all external connectors remained fully
+                            accessible while the custom I/O board aligned and mounted precisely with the AI HAT. Special
+                            attention was given to maintaining a clean, rigid PCIe connection between the two boards,
+                            ensuring reliable communication without adding unnecessary weight or complexity to the
+                            assembly.</p>
+                    </div>
+                    <img src="maav_images/mounting.png" alt="Prototyping PCB" class="timeline-image"
+                        style="width:200px; height:220px; object-fit:cover; border-radius:8px;">
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card w3-white">
+                        <h4><b>Researching Connector Footprints</b></h4>
+                        <p>We needed to add the PCIE connector so we started looking into footprints to add to the
+                            schematic. Special attention was given to differential pair routing requirements and
+                            impedance considerations to ensure high-speed signal integrity.</p>
+                    </div>
+                    <img src="maav_images/pcie_footprint.png" alt="Prototyping PCB" class="timeline-image"
+                        style="width:200px; height:200px; object-fit:cover; border-radius:8px;">
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-text w3-card w3-white">
+                        <h4><b>Looking Forward</b></h4>
+                        <p>
+                            The board is currently in active development. We are preparing for a formal design review
+                            where we will validate power distribution, high-speed routing constraints, and mechanical
+                            integration requirements with the software team.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="w3-container w3-center w3-padding-16">
+                <p>© 2026 Kyle DiMalanta</p>
+            </footer>
+
+        </div>
+    </div>
+</body>
+
+</html>
